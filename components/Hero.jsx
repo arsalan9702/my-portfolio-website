@@ -1,0 +1,58 @@
+'use client'
+import React from 'react'
+import { Spotlight } from './ui/Spotlight'
+import { TextGenerateEffect } from './ui/text-generate-effect'
+import Link from 'next/link'
+import Button from './ui/Button'
+
+const Hero = () => {
+    return (
+        <div className="relative">
+            <div className="pb-10 pt-16 md:pt-36 relative">
+                <div className="relative">
+                    <Spotlight
+                        className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
+                        fill="white"
+                    />
+                    <Spotlight
+                        className="top-10 left-full h-[80vh] w-[50vw]"
+                        fill="rgb(110, 7, 186)"
+                    />
+                    <Spotlight
+                        className="top-28 left-80 h-[80vh] w-[50vw]"
+                        fill="blue"
+                    />
+                </div>
+            </div>
+
+            <div className="relative size-full bg-slate-950">
+                <div className="absolute bottom-0 left-[-20%] right-0 top-[-10%] size-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]" />
+                <div className="absolute bottom-0 right-[-20%] top-[-10%] size-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]" />
+            </div>
+
+            <div className="flex justify-center relative z-10">
+                <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
+                    <h1 className="uppercase tracking-widest text-center text-blue-100 max-w-80">
+                        Hello this is portfolio
+                    </h1>
+                </div>
+            </div>
+
+            <TextGenerateEffect
+                className="text-center text-4xl md:text-5xl lg:text-6xl font-bold mb-7 pt-1" words="Providing solutions to problems"
+            />
+
+            <p className="relative text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl my-3">
+                Hi, I&apos;m Arsalan, a text enthusiast and developer in India.
+            </p>
+
+            <div className='flex justify-center mt-8'>
+                <Link href="/">
+                    <Button />
+                </Link>
+            </div>
+        </div>
+    )
+}
+
+export default Hero

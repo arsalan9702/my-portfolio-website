@@ -99,7 +99,7 @@ export const Card = ({
                         {description}
                     </div>
 
-                    <div className="font-sans text-lg lg:text-3xl max-w-96 font-bold z-10">
+                    <div className="font-sans hover:text-[#a46ef6] text-lg lg:text-3xl max-w-96 font-bold z-10">
                         {title}
                     </div>
 
@@ -133,6 +133,7 @@ export const Card = ({
                                     position="right"
                                     text={copied ? 'Email Copied!' : 'Copy My Email'}
                                     onClick={handleClick}
+                                    className={'hover:text-white-200'}
                                 />
                             </div>
                         </div>

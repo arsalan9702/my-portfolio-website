@@ -1,5 +1,6 @@
 import { CardGrid, Card } from "@/components/CardGrid";
 import Hero from "@/components/Hero";
+import RecentProjects from "@/components/RecentProjects";
 import { FloatingNavbar } from "@/components/ui/FloatingNavbar";
 import { FaHome } from "react-icons/fa";
 
@@ -13,6 +14,7 @@ export default function Home() {
         ]} />
         <Hero />
         <CardGrid />
+        <RecentProjects />
       </div>
     </main>
   );

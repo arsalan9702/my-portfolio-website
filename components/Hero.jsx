@@ -4,6 +4,7 @@ import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/text-generate-effect'
 import Link from 'next/link'
 import Button from './ui/Button'
+import { FaLocationArrow } from "react-icons/fa";
 
 const Hero = () => {
     return (
@@ -43,12 +44,16 @@ const Hero = () => {
             />
 
             <p className="relative text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl my-3">
-                Hi, I&apos;m Arsalan, a text enthusiast and developer in India.
+                Hi, I&apos;m Arsalan, a tech enthusiast and developer in India.
             </p>
 
             <div className='flex justify-center mt-8'>
                 <Link href="/">
-                    <Button />
+                    <Button 
+                        icon = {<FaLocationArrow />}
+                        position = "right"
+                        text = "Show My Work"
+                    />
                 </Link>
             </div>
         </div>

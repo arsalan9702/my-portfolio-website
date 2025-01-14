@@ -48,7 +48,7 @@ const Hero = () => {
             </p>
 
             <div className='flex justify-center mt-8'>
-                <Link href="/">
+                <Link href="https://github.com/arsalan9702">
                     <Button 
                         icon = {<FaLocationArrow />}
                         position = "right"

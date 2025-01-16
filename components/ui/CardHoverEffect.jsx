@@ -41,7 +41,7 @@ export const HoverEffect = ({
                         <img
                             src={item.img}
                             alt={item.title}
-                            className="rounded-3xl h-full w-full object-cover"
+                            className="object-cover"
                         />
                         <CardTitle>{item.title}</CardTitle>
 

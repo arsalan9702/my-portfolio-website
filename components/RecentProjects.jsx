@@ -4,7 +4,7 @@ import { HoverEffect } from './ui/CardHoverEffect'
 
 const RecentProjects = () => {
   return (
-    <div className="max-w-5xl mx-auto px-8">
+    <div className="max-w-5xl mx-auto px-8" id="projects">
       <HoverEffect items={projects} className={`gap-x-5 gap-y-3`}/>
     </div>
   )

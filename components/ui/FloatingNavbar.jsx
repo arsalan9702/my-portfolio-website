@@ -22,7 +22,7 @@ export const FloatingNavbar = ({ navItems, className }) => {
         animate={{ y: visible ? 0 : -100, opacity: visible ? 1 : 0 }}
         transition={{ duration: 0.2 }}
         className={cn(
-          "flex max-w-fit fixed top-10 inset-x-0 mx-auto items-center justify-center rounded-full py-2 px-6 space-x-4 shadow-lg z-[5000] bg-white dark:bg-black border border-neutral-200 dark:border-white/[0.2]",
+          "flex max-w-fit fixed top-10 inset-x-0 mx-auto rounded-full items-center justify-center py-5 px-6 space-x-4 shadow-lg z-[5000] bg-white dark:bg-black border border-neutral-200 dark:border-white/[0.2]",
           className
         )}
       >
@@ -31,11 +31,11 @@ export const FloatingNavbar = ({ navItems, className }) => {
             key={`link=${idx}`}
             href={navItem.link}
             className={cn(
-              "relative flex items-center space-x-2 text-neutral-600 dark:text-neutral-50 hover:text-neutral-500 dark:hover:text-neutral-300"
+              "relative flex items-center space-x-2 text-neutral-600 dark:text-neutral-50 dark:hover:text-[#a46ef6]"
             )}
           >
             <span className="sm:hidden">{navItem.icon}</span>
-            <span className="hidden sm:block text-sm font-medium">{navItem.name}</span>
+            <span className="hidden sm:block text-md font-medium">{navItem.name}</span>
           </Link>
         ))}
       </motion.div>

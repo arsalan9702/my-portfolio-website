@@ -126,7 +126,7 @@ export const Card = ({
                     )}
 
                     {id === 6 && (
-                        <div className='mt-5 relative'>
+                        <div className='mt-5 relative' id="contact">
                             <div className="relative pointer-events-auto">
                                 <Button
                                     icon={<IoCopyOutline />}

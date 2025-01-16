@@ -1,9 +1,11 @@
+import { FaProjectDiagram, FaEnvelope, FaHome } from "react-icons/fa";
+
 export const navItems = [
-    { name: "About", link: "#about" },
-    { name: "Projects", link: "#projects" },
-    { name: "Testimonials", link: "#testimonials" },
-    { name: "Contact", link: "#contact" },
-  ];
+  { name: "About", link: "#about", icon: <FaHome /> },
+  { name: "Projects", link: "#projects", icon: <FaProjectDiagram /> },
+  // { name: "Testimonials", link: "#testimonials", icon: <FaStar /> },
+  { name: "Contact", link: "#contact", icon: <FaEnvelope /> },
+];
   
   export const gridItems = [
     {

@@ -4,11 +4,13 @@ import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/text-generate-effect'
 import Link from 'next/link'
 import Button from './ui/Button'
-import { FaLocationArrow } from "react-icons/fa";
+import { IoLogoGithub } from "react-icons/io5";
+import { BackgroundBeams } from './ui/BackgroundBeams'
 
 const Hero = () => {
     return (
         <div className="relative">
+            <BackgroundBeams />
             <div className="pb-10 pt-16 md:pt-36 relative">
                 <div className="relative">
                     <Spotlight
@@ -26,10 +28,7 @@ const Hero = () => {
                 </div>
             </div>
 
-            <div className="relative size-full bg-slate-950">
-                <div className="absolute bottom-0 left-[-20%] right-0 top-[-10%] size-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]" />
-                <div className="absolute bottom-0 right-[-20%] top-[-10%] size-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]" />
-            </div>
+            
 
             <div className="flex justify-center relative z-10">
                 <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
@@ -48,9 +47,9 @@ const Hero = () => {
             </p>
 
             <div className='flex justify-center mt-8'>
-                <Link href="https://github.com/arsalan9702">
+                <Link href="https://github.com/arsalan9702?tab=repositories">
                     <Button 
-                        icon = {<FaLocationArrow />}
+                        icon = {<IoLogoGithub size={28}/>}
                         position = "right"
                         text = "Show My Work"
                     />

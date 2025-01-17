@@ -1,7 +1,9 @@
 import { CardGrid } from "@/components/CardGrid";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import RecentProjects from "@/components/RecentProjects";
 import { FloatingNavbar } from "@/components/ui/FloatingNavbar";
+import WorkExperience from "@/components/WorkExperience";
 import { navItems } from "@/data";
 
 
@@ -14,6 +16,8 @@ export default function Home() {
         <Hero />
         <CardGrid />
         <RecentProjects />
+        <WorkExperience />
+        <Footer />
       </div>
     </main>
   );

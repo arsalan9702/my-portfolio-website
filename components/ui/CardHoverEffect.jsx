@@ -12,66 +12,70 @@ export const HoverEffect = ({
     let [hoveredIndex, setHoveredIndex] = useState(null);
 
     return (
-        (<div
-            className={cn("grid grid-cols-1 md:grid-cols-2 py-10", className)}>
-            {items.map((item, idx) => (
-                <Link
-                    href={item?.link}
-                    key={item?.link}
-                    className="relative group block p-2 h-full w-full"
-                    onMouseEnter={() => setHoveredIndex(idx)}
-                    onMouseLeave={() => setHoveredIndex(null)}>
-                    <AnimatePresence>
-                        {hoveredIndex === idx && (
-                            <motion.span
-                                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-[#23174d] block  rounded-3xl"
-                                layoutId="hoverBackground"
-                                initial={{ opacity: 0 }}
-                                animate={{
-                                    opacity: 1,
-                                    transition: { duration: 0.15 },
-                                }}
-                                exit={{
-                                    opacity: 0,
-                                    transition: { duration: 0.15, delay: 0.2 },
-                                }} />
-                        )}
-                    </AnimatePresence>
-                    <Card>
-                        <img
-                            src={item.img}
-                            alt={item.title}
-                            className="object-cover"
-                        />
-                        <CardTitle>{item.title}</CardTitle>
+        (<>
+            <div
+                className={cn("grid grid-cols-1 md:grid-cols-2 py-10", className)}>
 
-                        <CardDescription>{item.des}</CardDescription>
+                {items.map((item, idx) => (
+                    <Link
+                        href={item?.link}
+                        key={item?.link}
+                        className="relative group block p-2 h-full w-full"
+                        onMouseEnter={() => setHoveredIndex(idx)}
+                        onMouseLeave={() => setHoveredIndex(null)}>
+                        <AnimatePresence>
+                            {hoveredIndex === idx && (
+                                <motion.span
+                                    className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-[#23174d] block  rounded-3xl"
+                                    layoutId="hoverBackground"
+                                    initial={{ opacity: 0 }}
+                                    animate={{
+                                        opacity: 1,
+                                        transition: { duration: 0.15 },
+                                    }}
+                                    exit={{
+                                        opacity: 0,
+                                        transition: { duration: 0.15, delay: 0.2 },
+                                    }} />
+                            )}
+                        </AnimatePresence>
 
-                        <div className="flex space-x-2 mt-4">
-                            {item.iconLists.map((icon, index) => (
-                                <div key={index} className="p-1 items-center justify-center border border-white/[0.2] bg-black-100 rounded-full flex" style={{
-                                    transform: `translateX(-${5 * index * 4}px)`
-                                }}>
-                                    <img
-                                        src={icon}
-                                        alt={`icon-${index}`}
-                                        className="h-8 w-8 rounded-full"
-                                    />
-                                </div>
-                            ))}
-                        </div>
+                        <Card>
+                            <img
+                                src={item.img}
+                                alt={item.title}
+                                className="object-cover"
+                            />
+                            <CardTitle>{item.title}</CardTitle>
 
-                        <div className="mt-4">
-                            <span
-                                className="hover:text-[#a46ef6] hover:underline font-medium"
-                            >
-                                View Project
-                            </span>
-                        </div>
-                    </Card>
-                </Link>
-            ))}
-        </div>)
+                            <CardDescription>{item.des}</CardDescription>
+
+                            <div className="flex space-x-2 mt-4">
+                                {item.iconLists.map((icon, index) => (
+                                    <div key={index} className="p-1 items-center justify-center border border-white/[0.2] bg-black-100 rounded-full flex" style={{
+                                        transform: `translateX(-${5 * index * 4}px)`
+                                    }}>
+                                        <img
+                                            src={icon}
+                                            alt={`icon-${index}`}
+                                            className="h-8 w-8 rounded-full"
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+
+                            <div className="mt-4">
+                                <span
+                                    className="hover:text-[#a46ef6] hover:underline font-medium"
+                                >
+                                    View Project
+                                </span>
+                            </div>
+                        </Card>
+                    </Link>
+                ))}
+            </div>
+        </>)
     );
 };
 

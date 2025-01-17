@@ -6,17 +6,25 @@ import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from './ui/GradientBG';
 import Button from './ui/Button';
 import { IoCopyOutline } from "react-icons/io5";
+import { Spotlight } from './ui/Spotlight';
+import { BackgroundBeams } from './ui/BackgroundBeams';
 
 export const CardGrid = ({ className }) => {
     return (
-        <div className={`pb-12 pt-12 grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 max-w-7xl mx-auto ${className}`}>
-            {gridItems.map((item) => (
-                <Card
-                    key={item.id}
-                    {...item}
-                />
-            ))}
-        </div>
+        <>
+            <div className={`pb-12 pt-12 grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 max-w-7xl mx-auto ${className}`}>
+                {gridItems.map((item) => (
+                    <Card
+                        key={item.id}
+                        {...item}
+                    />
+                ))}
+            </div>
+            <div className="relative size-full bg-slate-950">
+                <div className="absolute bottom-0 left-[-20%] right-0 top-[-10%] size-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]" />
+                <div className="absolute bottom-0 right-[-20%] top-[-10%] size-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]" />
+            </div>
+        </>
     );
 };
 
@@ -34,8 +42,8 @@ export const Card = ({
 
     const handleClick = () => {
         navigator.clipboard.writeText("arsalansayed9702@gmail.com");
-        setCopied(true); 
-        setTimeout(()=>{setCopied(false)}, 2000)
+        setCopied(true);
+        setTimeout(() => { setCopied(false) }, 2000)
     }
 
     const sizeClasses = {
@@ -126,7 +134,7 @@ export const Card = ({
                     )}
 
                     {id === 6 && (
-                        <div className='mt-5 relative' id="contact">
+                        <div className='mt-5 relative'>
                             <div className="relative pointer-events-auto">
                                 <Button
                                     icon={<IoCopyOutline />}

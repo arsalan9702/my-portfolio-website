@@ -19,7 +19,7 @@ const Footer = () => {
     setStatus('sending')
     
     try {
-      const response = await fetch('/api/route', {
+      const response = await fetch('/api/route', {  
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -104,7 +104,7 @@ const Footer = () => {
               icon={<IoIosSend size={20} />}
               position="right"
               className="w-full disabled:opacity-50 disabled:cursor-not-allowed"
-              onClick={(e) => !status === 'sending' && handleSubmit(e)}
+              // onClick={(e) => !status === 'sending' && handleSubmit(e)}
             />
             
             {status === 'success' && (

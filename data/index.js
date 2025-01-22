@@ -51,8 +51,8 @@ export const navItems = [
   
     {
       id: 5,
-      title: "Currently building a JS Animation library",
-      description: "The Inside Scoop",
+      title: "Currently building a GO app",
+      description: "A CLI interface using only GO lang",
       className: "md:col-span-3 md:row-span-2",
       imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
       titleClassName: "justify-center md:justify-start lg:justify-center",
@@ -207,13 +207,16 @@ export const navItems = [
     {
       id: 1,
       img: "/git.svg",
+      link: "https://github.com/arsalan9702"
     },
     {
       id: 2,
       img: "/twit.svg",
+      link: "https://x.com/ArsalanSay98105"
     },
     {
       id: 3,
       img: "/link.svg",
+      link: "https://www.linkedin.com/in/arsalan-sayed-a73675207/"
     },
   ];

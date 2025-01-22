@@ -6,8 +6,6 @@ import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from './ui/GradientBG';
 import Button from './ui/Button';
 import { IoCopyOutline } from "react-icons/io5";
-import { Spotlight } from './ui/Spotlight';
-import { BackgroundBeams } from './ui/BackgroundBeams';
 
 export const CardGrid = ({ className }) => {
     return (
@@ -114,7 +112,7 @@ export const Card = ({
                     {id === 3 && (
                         <div className='flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2'>
                             <div className='flex flex-col gap-3 lg:gap-4'>
-                                {['React.js', 'Next.js', 'Typescript'].map((item) =>
+                                {['React.js', 'Next.js', 'GO'].map((item) =>
                                     <span key={item} className=' border border-white-100/[0.1] py-3 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#14194c]'>
                                         {item}
                                     </span>
@@ -124,7 +122,7 @@ export const Card = ({
 
                             <div className='flex flex-col gap-3 lg:gap-4'>
                                 <span className='py-5 px-3 rounded-lg bg-[#14194c]' />
-                                {['React.js', 'Next.js', 'Typescript'].map((item) =>
+                                {['Java', 'C/C++', 'Python'].map((item) =>
                                     <span key={item} className='py-3 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#14194c]'>
                                         {item}
                                     </span>

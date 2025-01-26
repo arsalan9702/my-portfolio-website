@@ -10,7 +10,7 @@ import { BackgroundBeams } from './ui/BackgroundBeams'
 const Hero = () => {
     return (
         <div className="relative">
-            /* <BackgroundBeams /> */
+            <BackgroundBeams /> 
             <div className="pb-10 pt-16 md:pt-36 relative">
                 <div className="relative">
                     <Spotlight
